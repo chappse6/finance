@@ -2,6 +2,11 @@
 
 MCN의 백오피스로 사용되는 정산금액 산정 기능의 API
 
+## 기술 스택
+- 어플리케이션 : Java 11 / Spring Boot 2.7.0 / MariaDB / JPA / Gradle / JUnit5
+- IDE : IntelliJ IDEA
+- OS : Mac OS M1
+
 ## 구현된 API
 특정 유튜브 채널에 수익금액 데이터 등록 API
 - POST /revenue
@@ -24,7 +29,7 @@ API 응답 오류 상황에 대해 명시적으로 Exception 을 발생시킴으
 예를 들어, 기존에는 500 응답이 내려오는 경우 오류 message를 확인할 수 없는 단점이 있었는데 FinancialInformationException 을 throw 함으로써 정확한 오류 원인을 파악하실 수 있습니다.
 
 ### 전역 예외 처리
-중복 코드를 줄이고 유지보수를 쉽게하기 위해 RestControllerAdvice, ExceptionHandler 어노테이션을 활용하여 전역에서 예외 처리하도록 처리했다.
+중복 코드를 줄이고 유지보수를 쉽게하기 위해 RestControllerAdvice, ExceptionHandler 어노테이션을 활용하여 전역에서 예외 처리하도록 처리했습니다.
 
 ```java
     @ResponseBody
