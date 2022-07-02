@@ -41,3 +41,6 @@ API 응답 오류 상황에 대해 명시적으로 Exception 을 발생시킴으
         return new ResponseEntity<>(ErrorResult.of(e), HttpStatus.BAD_REQUEST);
     }
 ```
+
+## 테스트
+src/test/java 의 RevenueApiControllerTest와 RevenueServiceTest를 참조해주세요.
